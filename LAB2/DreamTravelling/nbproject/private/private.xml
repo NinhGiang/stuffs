@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/InsertTourServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/SearchServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/FilterController.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/ViewCartServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/ApplyDiscountServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/AddTourServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/tblTour/TblTourDAO.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/UpdateItemServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/web/index.html</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/LogoutServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/web/dashboard.jsp</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/CheckOutServlet.java</file>
+            <file>file:/C:/Users/ADMIN/Desktop/LAB2/DreamTravelling/src/java/giang/controller/StartAppServlet.java</file>
+        </group>
+    </open-files>
+</project-private>
