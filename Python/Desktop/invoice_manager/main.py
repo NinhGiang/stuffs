@@ -1,0 +1,2 @@
+import invoicemanager
+invoicemanager.create()
