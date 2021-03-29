@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ResourceSharing">
+    <Resource name="SE140115" type="javax.sql.DataSource" auth="Container" 
+              driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              url="jdbc:sqlserver://localhost:1433;databaseName=ResourceSharing;"
+              username="sa" password="12345678"
+    />
+    <!--<Resource name="SE140115" type="javax.sql.DataSource" auth="Container" 
+              driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              url="jdbc:sqlserver://se140115.database.windows.net:1433;database=ResourceSharing;trustServerCertificate=true;"
+              username="se140115" password="khongcongi@123"
+    />-->
+</Context>

@@ -1,0 +1,91 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="">
+            <result>login.html</result>
+        </action>
+        <action name="try">
+            <result>login.html</result>
+        </action>
+        <!--Login-->
+        <action name="login" class="giang.struts2.LoginAction" method="checkLogin">
+            <result name="success">dashboard.jsp</result>
+            <result name="requireverify" type="chain">emailer</result>
+            <result name="successmanager" type="redirectAction">
+                <param name="actionName">loadreq</param>
+            </result>
+            <result name="fail" type="redirect">invalid.html</result>
+        </action>
+        <!--Logout-->
+        <action name="logout" class="giang.struts2.LogoutAction" method="checkLogout">
+            <result>login.html</result>
+            <!--<result name="fail" type="redirect">error.html</result>-->
+        </action>
+        <!--Register Account-->
+        <action name="register" class="giang.struts2.RegisterAction" method="registerAccount">
+            <result type="chain">emailer</result>
+            <result name="error">register.jsp</result>
+            <result name="fail" type="redirect">error.html</result>
+        </action>
+        <!--Verify Account-->
+        <action name="verifyacc" class="giang.struts2.VerifyAccAction" method="verifyAccount">
+            <result>confirmmail.jsp</result>
+        </action>
+        <!--Send Email-->
+        <action name="emailer" class="giang.utils.Emailer" method="execute">
+            <result name="success">confirmmail.jsp</result>
+            <result name="error">error.html</result>
+        </action>
+        <!--Search Resource-->
+        <action name="search" class="giang.struts2.SearchAction" method="searchResource">
+            <result>dashboard.jsp</result>
+            <!--<result name="fail" type="redirect">error.html</result>-->
+        </action>
+        <!--Book Resource-->
+        <action name="book" class="giang.struts2.BookAction" method="bookResource">
+            <result type="chain">search</result>
+            <!--<result name="fail" type="redirect">error.html</result>-->
+        </action>
+        <!--Load Request-->
+        <action name="loadreq" class="giang.struts2.LoadReqAction" method="loadRequest">
+            <result>pendingrequest.jsp</result>
+            <result name="fail" type="redirect">error.html</result>
+        </action>
+        <!--Search Request-->
+        <action name="searchreq" class="giang.struts2.SearchReqAction" method="searchRequest">
+            <result>pendingrequest.jsp</result>
+            <result name="successnosearch" type="chain">loadreq</result>
+            <result name="fail" type="redirect">error.html</result>
+        </action>
+        <!--Handle Request-->
+        <action name="handlereq" class="giang.struts2.HandleReqAction" method="handleRequest">
+            <result type="chain">searchreq</result>
+            <result name="successnosearch" type="redirect">loadreq</result>
+            <result name="fail" type="redirect">error.html</result>
+        </action>
+        <!--Update Cart-->
+        <action name="updatecart" class="giang.struts2.UpdateCartAction" method="updateCart">
+            <result>bookrequest.jsp</result>
+            <!--<result name="fail" type="redirect">error.html</result>-->
+        </action>
+        <!--Send Request-->
+        <action name="sendreq" class="giang.struts2.SendReqAction" method="sendRequest">
+            <result>dashboard.jsp</result>
+            <result name="fail">bookrequest.jsp</result>
+        </action>
+        <!--View & Search History-->
+        <action name="loadhistory" class="giang.struts2.LoadHistoryAction" method="loadHistory">
+            <result>history.jsp</result>
+            <!--<result name="fail" type="redirect">error.html</result>-->
+        </action>
+        <!--Delete Request-->
+        <action name="deletereq" class="giang.struts2.DeleteReqAction" method="deleteRequest">
+            <result type="chain">loadhistory</result>
+            <result name="fail" type="redirect">error.html</result>
+        </action>
+    </package>
+</struts>
